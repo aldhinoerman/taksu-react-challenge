@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/assets/styles/index.scss";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Taksu Technical Test",
@@ -15,7 +16,7 @@ export default function RootLayout({
     <html lang="en" data-theme="basicTheme">
       <body>
         <main className="text-white max-w-[425px] mx-auto min-h-screen">
-          {children}
+          <Providers>{children}</Providers>
         </main>
       </body>
     </html>
