@@ -12,8 +12,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" data-theme="basicTheme">
+      <body>
+        <main className="text-white max-w-[425px] mx-auto min-h-screen">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
