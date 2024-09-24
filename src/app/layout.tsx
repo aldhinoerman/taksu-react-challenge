@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="basicTheme">
-      <body>
+      <body className="font-roboto">
         <main className="text-white max-w-[425px] mx-auto min-h-screen">
           <Providers>{children}</Providers>
         </main>

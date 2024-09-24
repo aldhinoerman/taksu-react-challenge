@@ -19,7 +19,7 @@ interface ModalFormProps {
 }
 
 const ModalForm: React.FC<ModalFormProps> = ({ isOpen, onClose }) => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   return (
     <>
       <Modal
@@ -67,7 +67,7 @@ const ModalForm: React.FC<ModalFormProps> = ({ isOpen, onClose }) => {
                   <span className="label-text">Due Date</span>
                 </div>
                 <DatePicker
-                  selected={values.dueDate}
+                  selected={values.dueDate as any}
                   onChange={(date) => setFieldValue("dueDate", date)}
                   showTimeSelect
                   timeFormat="HH:mm:ss"
