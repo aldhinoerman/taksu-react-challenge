@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/assets/styles/index.scss";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Taksu Technical Test",
@@ -12,8 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" data-theme="basicTheme">
+      <body>
+        <main className="text-white max-w-[425px] mx-auto min-h-screen">
+          <Providers>{children}</Providers>
+        </main>
+      </body>
     </html>
   );
 }
