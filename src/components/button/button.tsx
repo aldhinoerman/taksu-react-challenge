@@ -9,6 +9,7 @@ interface ButtonProps
   size?: TButtonSize;
   icon?: React.ReactNode;
   disabled?: boolean;
+  shape?: string;
   iconPosition?: "left" | "right";
   className?: string;
 }
@@ -17,6 +18,7 @@ const Button: React.FC<ButtonProps> = ({
   disabled,
   children,
   className,
+  shape,
   iconPosition = "left",
   icon,
   size,
@@ -26,9 +28,9 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       className={classNames(
-        "rounded-md",
+        shape && shape === "circle" ? "rounded-full" : "rounded-md",
         variant && !disabled ? BUTTON_TYPE[variant]?.bg : "bg-neutral-600",
-        size ? BTN_SIZE[size] : "py-1 px-4",
+        size && !shape ? BTN_SIZE[size] : !shape ? "py-1 px-4" : "p-2",
         icon ? "flex justify-center align-middle gap-1" : "",
         className ? className : ""
       )}

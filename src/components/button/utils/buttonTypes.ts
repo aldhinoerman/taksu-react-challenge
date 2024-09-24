@@ -15,6 +15,10 @@ const BUTTON_TYPE = {
     bg: "bg-success",
     clr: "text-white",
   },
+  info: {
+    bg: "bg-info",
+    clr: "text-white",
+  },
 };
 
 const BTN_SIZE = {

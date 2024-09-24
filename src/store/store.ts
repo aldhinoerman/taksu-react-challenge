@@ -7,6 +7,7 @@ import { todoReducer } from "./todoSlice";
 const persistConfig = {
   key: "root",
   storage,
+  blacklist: ["todos"],
 };
 
 const rootReducer = combineReducers({

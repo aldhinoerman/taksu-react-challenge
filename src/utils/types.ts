@@ -1,4 +1,4 @@
-type TButton = "primary" | "default" | "error" | "success";
+type TButton = "primary" | "default" | "error" | "success" | "info";
 type TButtonSize = "small" | "medium" | "large";
 
 interface ITodo {
