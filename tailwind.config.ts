@@ -7,6 +7,7 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: { roboto: ["Roboto", "sans-serif"] },
     extend: {},
   },
   plugins: [daisyui],
@@ -15,10 +16,10 @@ const config: Config = {
       {
         mytheme: {
           primary: "#36393F",
-          secondary: "#36393F",
+          secondary: "#BABABA",
           accent: "#00ffff",
           neutral: "#40444B",
-          info: "#0000ff",
+          info: "#5440D1",
           success: "#39C36D",
           warning: "#00ff00",
           error: "#C33939",
